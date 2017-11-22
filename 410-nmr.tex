@@ -17,6 +17,7 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{url}
+\usepackage{bm}
 
 \usepackage{siunitx}
 \sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
@@ -30,7 +31,7 @@
 \renewcommand{\thefootnote}{\roman{footnote}}
 
 \pagestyle{fancy}
-\lhead{Praktikum IV - (A10) Pulzní metoda NME (část základní)}
+\lhead{Praktikum IV - (A10) Pulzní metoda NMR (část základní)}
 \rhead{Vladislav Wohlrath}
 \author{Vladislav Wohlrath}
 
@@ -39,19 +40,19 @@
 \begin{document}
 
 \begin{titlepage}
-\includepdf[pages={1}]{./graficos/410-tit.pdf}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
 \end{titlepage}
 
 \section*{Pracovní úkoly}
 \begin{enumerate}
-\item ÚKOLY
+\item Nastavení optimálních excitačních podmínek signálu FID $^1$H ve vzorku pryže.
+\item Měření závislosti amplitudy signálu FID $^1$H ve vzorku pryže na délce excitačního pulzu. Určení velikosti amplitudy radiofrekvenčního pole $B_1$.
+\item Studium signálu dvouimpulzového spinového echa $^1$H ve vzorku pryže.
+\item Studium procesu koherentní sumace.
 \end{enumerate}
 
 %Teoretická část
 \input{teorie.tex}
-
-%Podmínky a měřící přístroje
-\input{podminky.tex}
 
 %Výsledky měření
 \input{vysledky.tex}

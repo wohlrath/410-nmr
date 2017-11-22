@@ -1,1 +1,119 @@
 \section*{Výsledky měření}
+Použili jsme magnetické pole $B_0=\SI{0.4306}{\tesla}$. Pro protony platí $\gamma/2\pi=\SI{42.512990}{\MHz\per\tesla}$ \cite{skripta}.
+
+Předmětem měření byl vodík $^1$H ve vzorku pryže. Larmorova frekvence byla podle \eqref{e:fL} rovna
+\begin{equation*}
+f_L=\SI{18.306}{\MHz} \,.
+\end{equation*}
+To se shodovalo s přednastavenou hodnotou na přístroji. Ověřili jsme, že skutečně dochází k resonanci.
+
+Průběh signálu FID při pulzu dlouhém $\tau=\SI{6}{\us}$ a trigrovací dobou $T_0=\SI{400}{\ms}$ je v příloze 1. Průběh pulzu je v příloze 2. Z obrázku vidíme, že v prvních cca \SI{40}{\us} je detektor přesycen a signál je nepoužitelný.
+Signál jsme vystředovali přes 10 průběhů (příloha 3) a provedli FFT, abychom dostali NMR spektrum vzorku (příloha 4). 
+
+
+
+Z \eqref{e:mz} vyplývá, že amplituda signálu FID by měla být závislá na trigrovací době jako
+\begin{equation*}
+A(T_0)=A_0(1-exp(-T_0/T_1)) \,,
+\end{equation*}
+Tato závislost je zanesena do grafu \ref{g:t1} a tabulky \ref{t:t1}.
+Fitem jsme určili spin-mřížkovou relaxační dobu
+\begin{equation*}
+T_1=\SI{65(2)}{\ms} \,,\qquad \qquad A_0 = \num{0.0425(3)} \,.
+\end{equation*}
+Dále $T_0=\SI{300}{\ms}$.
+
+\begin{graph}[htbp] 
+\centering
+\input{t1.tex}
+\caption{Závislost amplitudy signálu FID na trigrovací době $T_0$.}
+\label{g:t1}
+\end{graph}
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc|cc}
+$T_0$ (\si{\ms}) & $A$ & $T_0$ (\si{\ms}) & $A$ \\\hline
+5 & \num{0.00327} & 300 & \num{0.04147} \\
+10 & \num{0.00703} & 400 & \num{0.04241} \\
+20 & \num{0.01203} & 500 & \num{0.04284} \\
+40 & \num{0.01970} & 700 & \num{0.04273} \\
+80 & \num{0.02940} & 1000 & \num{0.04296} \\
+160 & \num{0.03805} & & \\
+\end{tabular}
+\caption{Závislost amplitudy signálu FID na trigrovací době $T_0$.}
+\label{t:t1}
+\end{tabulka}
+
+
+Dále jsme měřili závislost amplitudy signálu FID na délce pulzu $\tau$. Z \eqref{e:uhel} vyplývá, že závislost by měla mít tvar
+\begin{equation*}
+A(\tau)=A_1 |\sin(\gamma B_1 \tau) | \,.
+\end{equation*}
+Tato závislost je vykreslena v grafu \ref{g:tau} a tabulce \ref{t:tau}.
+Fitem jsme určili amplitudu pulzního pole
+\begin{equation*}
+B_1=\SI{1.076(3)}{\milli\tesla}  \,,\qquad \qquad A_1 = \num{0.0408(5)} \,.
+\end{equation*}
+
+\begin{graph}[htbp] 
+\centering
+\input{tau.tex}
+\caption{Závislost amplitudy signálu FID na délce pulzu $\tau$.}
+\label{g:tau}
+\end{graph}
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc|cc|cc}
+$\tau$ (\si{\us}) & $A$ & $\tau$ (\si{\us}) & $A$ & $\tau$ (\si{\us}) & $A$ \\\hline
+2 & \num{0.02039}  & 16 & \num{0.03913}  & 30 & \num{0.03004}\\
+4 & \num{0.03634}  & 18 & \num{0.03568}  & 32 & \num{0.01085}\\
+6 & \num{0.03966}  & 20 & \num{0.02075}  & 34 & \num{0.01398}\\
+8 & \num{0.02970}  & 20 & \num{0.00563}  & 36 & \num{0.03287}\\
+10 & \num{0.01021} & 24 & \num{0.02289}  & 38 & \num{0.04202}\\
+12 & \num{0.01496} & 26 & \num{0.03793}  & 40 & \num{0.03872}\\
+14 & \num{0.03107} & 28 & \num{0.04015}  & & \\
+\end{tabular}
+\caption{Závislost amplitudy signálu FID na délce pulzu $\tau$.}
+\label{t:tau}
+\end{tabulka}
+
+Dále jsme měřili závislost amplitudy signálu spinového echa (viz příloha 5) na odstupu excitačních pulzů $t_{12}$. Z \eqref{e:mt} vyplývá závislost tvaru
+\begin{equation*}
+A(t_{12})=A_2 \exp(-t_{12}/T_2) \,.
+\end{equation*}
+Závislost je zanesena do grafu \ref{g:t2} a tabulky \ref{t:t2} (délka prvního pulzu \SI{6}{\us} a druhého \SI{11.7}{\us}).
+Fitem jsme určili spin-spinovou relaxační dobu
+\begin{equation*}
+T_2=\SI{960(40)}{\us}  \,,\qquad \qquad A_2 = \num{0.066(2)} \,.
+\end{equation*}
+Skutečně platí $T_2 \ll T_1$.
+
+
+\begin{graph}[htbp] 
+\centering
+\input{t2.tex}
+\caption{Závislost amplitudy signálu spinového echa na odstupu pulzů $t_{12}$.}
+\label{g:t2}
+\end{graph}
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc|cc|cc}
+$t_{12}$ (\si{\us}) & $A$ & $t_{12}$ (\si{\us}) & $A$ & $t_{12}$ (\si{\us}) & $A$ \\\hline
+100 & \num{0.06140}  & 800  & \num{0.02684}  & 3500 & \num{0.00429}\\
+150 & \num{0.05743}  & 1000 & \num{0.02220}  & 4500 & \num{0.00230}\\
+200 & \num{0.05308}  & 1300 & \num{0.01695}  & 5500 & \num{0.00160}\\
+300 & \num{0.04677}  & 1600 & \num{0.01391}  & 7000 & \num{0.00076}\\
+500 & \num{0.03721}  & 2000 & \num{0.01068}  &  & \\
+600 & \num{0.03256}  & 2500 & \num{0.00769}  &  & \\
+\end{tabular}
+\caption{Závislost amplitudy signálu spinového echa na odstupu pulzů $t_{12}$.}
+\label{t:t2}
+\end{tabulka}
+
+
+
+
+\input{koherentnisumace.tex}

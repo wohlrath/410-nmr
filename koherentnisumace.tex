@@ -1,0 +1,33 @@
+Vyšetřili jsme závislost standardní odchylky šumového napětí na počtu sumací, výsledky jsou v grafu \ref{g:s} a tabulce \ref{t:s}. V grafu \ref{g:sum} je zakresleno několik spekter pro vybrané počty sumací (jsou vertikálně posunuté pro lepší porovnatelnost). Podle očekávání se intenzita šumu snižuje.
+
+\begin{graph}[htbp] 
+\centering
+\input{s.tex}
+\caption{Závislost standardní odchylky šumového napětí na počtu sumací}
+\label{g:s}
+\end{graph}
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc}
+$N$ & $\sigma^2_{\bar{u^n}}$ ($\cdot 10^{-4}$) \\\hline
+2  & 5,079 \\
+4 & 3,363 \\
+6 & 2,772 \\
+10 & 1,978 \\
+16 & 1,651 \\
+26 & 1,297 \\
+40 & 1,119 \\
+80 & 0,8890 \\
+200 & 0,6124 \\
+\end{tabular}
+\caption{Závislost standardní odchylky šumového napětí na počtu sumací}
+\label{t:s}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\input{sum.tex}
+\caption{Spektrum pro vybrané počty sumací.}
+\label{g:sum}
+\end{graph}
